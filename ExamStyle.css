@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+:root {
+  --body-bg-color: #e5d9b6;
+  --header-bg-color: #a4be7b;
+  --header2-bg-color: #5f8d4e;
+  --header-txt-color: #285430;
+  --txt-color: #f2f2f2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Quicksand", sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Main navigation bar START */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header-bg-color);
+}
+#logo {
+  width: 6%;
+  height: auto;
+}
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 1.3rem;
+}
+.navlinks a {
+  text-decoration: none;
+  color: var(--header-txt-color);
+  font-size: 2rem;
+}
+.navlinks a:hover {
+  color: var(--txt-color);
+}
+/* Search bar and button START */
+/* #searchbar {
+  padding-left: 0.3rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+}
+#button {
+  margin-top: 5rem;
+  padding: 0.4rem;
+  background: #ddd;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+} */
+/* Search bar and button END */
+/* Main navigation bar END */
+hr {
+  border: 0.2rem solid var(--body-bg-color);
+}
+/* Secondary navigation bar START */
+.header2 {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--header2-bg-color);
+}
+.header2 a {
+  text-decoration: none;
+  color: var(--header-txt-color);
+  font-size: 1.2rem;
+  transition: font-size 0.5s ease-in-out;
+}
+.header2 a:hover {
+  color: var(--txt-color);
+  font-size: 2rem;
+}
+/* Secondary navigation bar END */
+/* Card section START */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1400px;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+.card {
+  background-color: var(--body-bg-color);
+  text-align: center;
+  position: relative;
+  max-width: fit-content;
+}
+.card p {
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  color: var(--txt-color);
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 4rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.card p:hover {
+  opacity: 1;
+}
+/* Card section END */
+.top-link a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 0.7rem;
+  font-size: 1.7rem;
+  color: var(--header2-bg-color);
+  transition: font-size 0.5s ease-in-out;
+}
+.top-link a:hover {
+  color: var(--txt-color);
+  font-size: 2.3rem;
+}
+/* Footer START */
+.footer {
+  background-color: var(--header2-bg-color);
+  color: var(--txt-color);
+  text-align: center;
+  padding: 1rem;
+}
+.footer-links {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: var(--txt-color);
+}
+.footer-links a:hover {
+  color: var(--header-txt-color);
+}
+.social-icons a {
+  margin: 0 10px;
+  color: var(--txt-color);
+  font-size: 2rem;
+}
+.social-icons a:hover {
+  color: var(--header-txt-color);
+}
+/* Footer END */
+/* Recipe of the Month START */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--header-txt-color);
+  margin-top: 1rem;
+}
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--header-txt-color);
+}
+#description {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--header2-bg-color);
+}
+.needed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1400px;
+  gap: 12rem;
+  margin: 2rem auto;
+}
+.instructions {
+  width: 50%;
+}
+.howto {
+  text-align: center;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+ol li {
+  text-align: center;
+  display: list-item;
+  list-style-position: inside;
+}
+dl {
+  text-align: center;
+}
+dt {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+/* Recipe of the Month END */
+/* About page START */
+.about-txt {
+  margin: 1% 20%;
+}
+/* Media queries */
+@media (width < 769px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width < 481px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
