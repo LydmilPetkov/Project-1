@@ -45,22 +45,7 @@ img {
 .navlinks a:hover {
   color: var(--txt-color);
 }
-/* Search bar and button START */
-/* #searchbar {
-  padding-left: 0.3rem;
-  margin-top: 0.5rem;
-  font-size: 1.5rem;
-  border: none;
-}
-#button {
-  margin-top: 5rem;
-  padding: 0.4rem;
-  background: #ddd;
-  font-size: 1.5rem;
-  border: none;
-  cursor: pointer;
-} */
-/* Search bar and button END */
+
 /* Main navigation bar END */
 hr {
   border: 0.2rem solid var(--body-bg-color);
@@ -207,14 +192,21 @@ dt {
 .about-txt {
   margin: 1% 20%;
 }
+/* About page END */
 /* Media queries */
 @media (width < 769px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
+  #logo {
+    width: 15%;
+  }
 }
 @media (width < 481px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #logo {
+    width: 20%;
   }
 }
